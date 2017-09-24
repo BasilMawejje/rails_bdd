@@ -17,7 +17,7 @@
 <% end %>
 
 <h2>Add a comment:</h2>
-<%= form_with(model: [ @article, @article.comments.build ], local: true) do |form| %>
+<%= form_with(model: [ @article, @article.comments.build ]) do |form| %>
   <p>
     <%= form.label :email %><br>
     <%= form.text_field :email %>
