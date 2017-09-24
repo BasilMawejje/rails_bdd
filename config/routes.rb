@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'welcome#index'
+  root controller: :welcome, action: :index
 
   resources :articles
   resources :articles do
