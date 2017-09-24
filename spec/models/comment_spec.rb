@@ -10,9 +10,12 @@ RSpec.describe Comment, type: :model do
   describe 'Validations' do
     it { is_expected.to validate_presence_of :email }
     it { is_expected.to validate_presence_of :comment }
-    it 'validates the email format' do
-      VALID_EMAIL_REGEX = /\A([\w+\-]\.?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i.match('sample@domain.com')
-      expect(subject.email).to eq VALID_EMAIL_REGEX
+    it 'should have a properly formatted email' do
+      email = 'basil.kabe@g mail.com'
+      VALID_EMAIL_REGEX = /\A([\w+\-]\.?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
+      if VALID_EMAIL_REGEX.match(email)
+        expect(subject.email).to eq 'Email not properly formatted'
+      end
     end
   end
 end
