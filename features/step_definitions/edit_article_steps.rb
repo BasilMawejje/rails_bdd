@@ -6,3 +6,8 @@ Then(/^I should the updated article$/) do
   expect(page).to have_content 'title'
   expect(page).to have_content 'content'
 end
+
+Then(/^I should see the updated article$/) do
+  expect(page).to have_content 'Title'
+  expect(page).to have_content 'Content'
+end

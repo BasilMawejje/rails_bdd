@@ -12,7 +12,7 @@ Background:
   Scenario:Edit articles on application's landing page
     When I am on the "articles#index" page
     And I click on the "Edit" link
-    And I fill in "Title" with "New title"
-    And I fill in "Content" with "New Comment"
+    And I fill in "Title" with "New Title"
+    And I fill in "Content" with "New Content"
     And I click the "Update Article" button
-    Then I should the updated article
+    Then I should see the updated article
