@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   resources :articles
   resources :articles do
     resources :comments
+    resources :authors
   end
 end

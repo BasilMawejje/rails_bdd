@@ -42,6 +42,7 @@ group :development, :test do
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
   gem 'launchy'
+  gem 'pry', '~> 0.10.3'
 end
 
 group :development do
